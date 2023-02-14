@@ -1,0 +1,61 @@
+.recently-albums {
+	width: 90%;
+	margin: 25px auto 0;
+	h4 {
+		color: $text-color-light;
+		font-size: 1.8rem;
+	}
+	& .albums {
+		margin-top: 15px;
+		display: grid;
+		grid-gap: 20px;
+		height: 160px;
+		grid-template-columns: repeat(4, 1fr);
+        
+		& .album {
+            cursor: pointer;
+            &:nth-child(1){
+                background-image: url('../../image/hip-hop.png');
+            }&:nth-child(2){
+                background-image: url('../../image/Indie.png');
+            }&:nth-child(3){
+                background-image: url('../../image/pop.png');
+            }&:nth-child(4){
+                background-image: url('../../image/rap.png');
+            }
+            overflow: hidden;
+			position: relative;
+			color: $background-color-light;
+			border-radius: 10px;
+			i {
+				position: absolute;
+				top: 10%;
+				left: 10%;
+				font-size: 1.2rem;
+				padding: 10px;
+				background-color: rgba(#fff, 0.1);
+				border-radius: 50%;
+				backdrop-filter: blur(25px);
+				-webkit-backdrop-filter: blur(25px);
+			}
+			.description {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background-color: rgba(#fff, 0.1);
+				backdrop-filter: blur(25px);
+				-webkit-backdrop-filter: blur(25px);
+				padding: 10px 18px 10px;
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+				h3 {
+					font-size: 1.3rem;
+				}
+				p {
+					font-size: 1.3rem;
+				}
+			}
+		}
+	}
+}

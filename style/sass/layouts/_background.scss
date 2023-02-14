@@ -1,0 +1,59 @@
+.app {
+	&.background-dark {
+		& .sidebar-left {
+			color: map-get($map: $color-dark-mode, $key: background);
+			background-color: $secondary-color;
+			&__logo {
+				color: $text-color-light;
+				background-color: $blue-color-darker;
+			}
+			& .list-menu {
+				li {
+					a {
+						color: rgba($text-color-light, 0.5);
+						&.active {
+							color: rgba($text-color-light, 0.8);
+							background-color: rgba($text-color-light, 0.3);
+						}
+					}
+				}
+			}
+		}
+		& .main-center {
+			background-color: rgb($background-color-black, 0.8);
+			& .input-search {
+				color: rgba($text-color-light, 0.8);
+				input {
+					color: rgba($text-color-light, 0.8);
+					background-color: $secondary-color;
+				}
+			}
+			& .notification {
+				color: rgba($text-color-light, 0.8);
+				&.has-notification::after {
+					background-color: $blue-color-lighter;
+				}
+			}
+			& .user {
+				color: rgba($text-color-light, 0.8);
+				& .option {
+					background-color: rgb($primary-color-dark, 0.8);
+					a {
+						color: rgba($text-color-light, 0.8);
+						&.theme {
+							& .option-theme {
+								background-color: rgb($primary-color-dark, 0.8);
+							}
+						}
+					}
+				}
+			}
+		}
+		& .sidebar-right {
+		}
+	}
+	&.background-light .main-center {
+		background-color: rgb($background-color-light, 0.8);
+		color: rgba(0, 0, 0, 0.8);
+	}
+}

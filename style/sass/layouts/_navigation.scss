@@ -1,0 +1,124 @@
+%center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(100%, -50%);
+}
+
+.main-center {
+	.navigator {
+		width: 90%;
+		margin: 40px auto 0;
+		display: grid;
+		grid-template-columns: 1fr 30px 100px;
+		align-items: center;
+		text-align: center;
+		gap: 30px;
+		& .input-search {
+			position: relative;
+			i {
+				@extend %center;
+				z-index: 1;
+				font-size: 2rem;
+			}
+			input {
+				width: 100%;
+				font-size: 1.5rem;
+				@extend %center;
+				transform: translateY(-50%);
+				outline: none;
+				border: none;
+				border-radius: 30px;
+				padding: 15px 50px;
+			}
+		}
+		& .notification {
+			cursor: pointer;
+			color: #fff;
+			position: relative;
+			font-size: 2rem;
+			&.has-notification::after {
+				content: "";
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				top: 16%;
+				left: 50%;
+				border: 2px solid #000;
+			}
+		}
+		& .user {
+			display: flex;
+			justify-items: center;
+			align-items: center;
+			i {
+				font-size: 1.8rem;
+			}
+			span {
+				font-size: 1.6rem;
+				transform: translateY(4px);
+				padding-left: 10px;
+			}
+			& .list-option {
+				transform: translateY(2px);
+				padding-left: 10px;
+				position: relative;
+				i {
+					font-size: 1.5rem;
+					line-height: 1.6;
+					cursor: pointer;
+				}
+				& .option {
+					position: absolute;
+					top: 100%;
+					right: 0;
+					padding: 5px 15px;
+					width: 120px;
+					border-radius: 2px;
+					text-align: start;
+					display: grid;
+					gap: 10px;
+					font-size: 1.4rem;
+					grid-template-rows: repeat(3, 1fr);
+					// display: none;
+
+					a {
+						display: block;
+						display: flex;
+						justify-content: space-evenly;
+						&.theme {
+							position: relative;
+							& .option-theme {
+								cursor: default;
+								position: absolute;
+								top: 0;
+								left: 100%;
+								display: flex;
+								flex-direction: column;
+								width: 70%;
+								gap: 5px;
+								span {
+									cursor: pointer;
+									font-size: 1.4rem;
+								}
+								display: none;
+							}
+							&:hover {
+								& .option-theme {
+									display: flex;
+								}
+							}
+						}
+					}
+					display: none;
+				}
+				&:hover {
+					& .option {
+						display: grid;
+					}
+				}
+			}
+		}
+	}
+}

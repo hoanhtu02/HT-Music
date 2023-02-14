@@ -1,0 +1,20 @@
+$primary-color-dark: #0c0c0e;
+$secondary-color: #131313;
+$blue-color-darker: #00b2ff;
+$blue-color-lighter: #00b0fc;
+$text-color-light: #fff;
+$background-color: #402c5e;
+$background-color-black: #070606;
+$font: "Open Sans", sans-serif;
+$background-color-light: rgba(#fff, 0.8);
+
+$color-dark-mode: (
+	"background-sidebar": $secondary-color,
+	"background": #f6f6f6,
+	"text": #434343,
+);
+$color-light-mode: (
+	"background-sidebar": $background-color-light,
+	"background": #434343,
+	"text": #f6f6f6,
+);

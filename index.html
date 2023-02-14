@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="yourLogo.jpg" /> -->
+		<title>TH music</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css" />
+		<!-- <link rel="stylesheet" href="./font/mobirise/icon-font.css" /> -->
+		<link rel="stylesheet" href="./style/sass/main.scss" />
+		<script type="module" src="./script/app.js" defer></script>
+	</head>
+	<body>
+		<div class="app background-dark">
+			<div class="sidebar-left">
+				<a href="#" title="Songs" class="sidebar-left__logo"
+					><i class="fa-solid fa-music"></i
+				></a>
+				<ul class="list-menu">
+					<li>
+						<a href="#" title="Home" class="active"
+							><i class="fa-solid fa-house"></i
+						></a>
+					</li>
+					<li>
+						<a href="#" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+					</li>
+					<li>
+						<a href="#" title="Liked"><i class="fa-regular fa-heart"></i></a>
+					</li>
+					<li>
+						<a href="#" title="Trending"><i class="fa-solid fa-arrow-trend-up"></i></a>
+					</li>
+					<li>
+						<a href="#" title="More"><i class="fa-solid fa-plus"></i></a>
+					</li>
+				</ul>
+			</div>
+			<main class="main-center">
+				<div class="navigator">
+					<div class="input-search">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<input
+							type="text"
+							class="search-bar"
+							placeholder="Search for Song, Artist, Lyrics..."
+						/>
+					</div>
+					<div class="notification has-notification" color="red">
+						<i class="fa-regular fa-bell"></i>
+					</div>
+					<div class="user">
+						<!-- <img src="" alt="" /> -->
+						<i class="fa-regular fa-user"></i>
+						<span>Name</span>
+						<div class="list-option">
+							<i class="fa-solid fa-chevron-down"></i>
+							<div class="option">
+								<a href="#" class="option-1"
+									><i class="fa-solid fa-gear"></i>Setting</a
+								>
+								<a href="#" class="option-2 theme"
+									><i class="fa-solid fa-palette"></i>Theme
+									<div class="option-theme">
+										<span>Dark</span>
+										<span>Light</span>
+									</div>
+								</a>
+								<a href="#" class="option-3"
+									><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="recently-albums">
+					<h4>Recently Listened Albums</h4>
+					<div class="albums">
+						<div class="album">
+							<i class="fa-solid fa-music"></i>
+							<div class="description">
+								<h3 class="description__type">Hip-Hop</h3>
+								<p class="description__new-song">120 new songs</p>
+							</div>
+						</div>
+						<div class="album">
+							<i class="fa-solid fa-music"></i>
+							<div class="description">
+								<h3 class="description__type">Indie</h3>
+								<p class="description__new-song">34 new songs</p>
+							</div>
+						</div>
+						<div class="album">
+							<i class="fa-solid fa-music"></i>
+							<div class="description">
+								<h3 class="description__type">Pop</h3>
+								<p class="description__new-song">100 new songs</p>
+							</div>
+						</div>
+						<div class="album">
+							<i class="fa-solid fa-music"></i>
+							<div class="description">
+								<h3 class="description__type">Rap</h3>
+								<p class="description__new-song">49 new songs</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="trending-song">
+					<h4>Trending Right Now</h4>
+					<div class="list-song">
+						<div class="item">
+							<p class="index">0</p>
+							<div class="song">
+								<img src="#" alt="" class="song__img" />
+								<div class="info">
+									<h4 class="name-song">Millions</h4>
+									<p class="singer">Always Never</p>
+								</div>
+							</div>
+							<p class="views-quantity"></p>
+						</div>
+					</div>
+				</div>
+			</main>
+			<div class="sidebar--right">side__bar--right</div>
+		</div>
+	</body>
+</html>
