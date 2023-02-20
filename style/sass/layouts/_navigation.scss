@@ -7,7 +7,6 @@
 
 .main-center {
 	.navigator {
-		width: 90%;
 		margin: 40px auto 0;
 		display: grid;
 		grid-template-columns: 1fr 30px 100px;
@@ -64,6 +63,7 @@
 				transform: translateY(2px);
 				padding-left: 10px;
 				position: relative;
+				z-index: 2;
 				i {
 					font-size: 1.5rem;
 					line-height: 1.6;
@@ -73,7 +73,6 @@
 					position: absolute;
 					top: 100%;
 					right: 0;
-					padding: 5px 15px;
 					width: 120px;
 					border-radius: 2px;
 					text-align: start;
@@ -81,14 +80,13 @@
 					gap: 10px;
 					font-size: 1.4rem;
 					grid-template-rows: repeat(3, 1fr);
-					// display: none;
-
 					a {
-						display: block;
+						padding: 5px 15px;
 						display: flex;
 						justify-content: space-evenly;
 						&.theme {
 							position: relative;
+							z-index: 2;
 							& .option-theme {
 								cursor: default;
 								position: absolute;
@@ -99,7 +97,9 @@
 								width: 70%;
 								gap: 5px;
 								span {
+									display: inline-block;
 									cursor: pointer;
+									padding: 8px 10px 8px;
 									font-size: 1.4rem;
 								}
 								display: none;

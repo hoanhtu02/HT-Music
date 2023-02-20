@@ -1,29 +1,26 @@
 .recently-albums {
-	width: 90%;
-	margin: 25px auto 0;
-	h4 {
-		color: $text-color-light;
-		font-size: 1.8rem;
-	}
 	& .albums {
 		margin-top: 15px;
 		display: grid;
 		grid-gap: 20px;
 		height: 160px;
 		grid-template-columns: repeat(4, 1fr);
-        
+
 		& .album {
-            cursor: pointer;
-            &:nth-child(1){
-                background-image: url('../../image/hip-hop.png');
-            }&:nth-child(2){
-                background-image: url('../../image/Indie.png');
-            }&:nth-child(3){
-                background-image: url('../../image/pop.png');
-            }&:nth-child(4){
-                background-image: url('../../image/rap.png');
-            }
-            overflow: hidden;
+			cursor: pointer;
+			&:nth-child(1) {
+				background-image: url("../../image/hip-hop.png");
+			}
+			&:nth-child(2) {
+				background-image: url("../../image/Indie.png");
+			}
+			&:nth-child(3) {
+				background-image: url("../../image/pop.png");
+			}
+			&:nth-child(4) {
+				background-image: url("../../image/rap.png");
+			}
+			overflow: hidden;
 			position: relative;
 			color: $background-color-light;
 			border-radius: 10px;
@@ -57,5 +54,157 @@
 				}
 			}
 		}
+	}
+}
+
+.trending-song {
+	position: relative;
+	.list__songs {
+		margin-top: 20px;
+		max-height: 260px;
+		color: rgba(#fff, 0.8);
+		overflow-y: scroll;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+		.song {
+			padding: 10px 0;
+			border-radius: 8px;
+			font-size: 1.4rem;
+			display: grid;
+			grid-template-columns: 40px 60px 500px repeat(2, 1fr) 50px;
+			justify-content: center;
+			align-items: center;
+			grid-gap: 10px;
+			.index {
+				text-align: right;
+			}
+			&__img {
+				width: 60px;
+				height: 60px;
+			}
+			.info {
+				cursor: pointer;
+				.name {
+					font-size: 1.2rem;
+					color: #fff;
+				}
+				.singer {
+					color: rgba(#fff, 0.6);
+					font-size: 1rem;
+				}
+			}
+			.total-view {
+			}
+			.total-time {
+			}
+			.heart {
+				color: #fff;
+				&-regular {
+					cursor: pointer;
+					display: none;
+				}
+				&-solid {
+					cursor: pointer;
+					display: none;
+				}
+				& > .active {
+					display: block;
+				}
+			}
+			&:hover {
+				background-color: rgba(#fff, 0.1);
+			}
+
+			&.active {
+				background-color: rgba(#fff, 0.1);
+			}
+		}
+		&::-webkit-scrollbar {
+			width: 2px;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 6px;
+			background-color: $blue-color-lighter;
+		}
+		&::-webkit-scrollbar-track {
+			border-radius: none;
+		}
+		&::-webkit-scrollbar-button {
+			display: none;
+		}
+	}
+	.cover {
+		position: absolute;
+		height: 30%;
+		width: 100%;
+		bottom: 0;
+		background: rgb(255, 255, 255);
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+	}
+}
+
+.recently__favourites {
+	.favourites {
+		position: relative;
+		.view-fav {
+			height: 154px;
+			position: relative;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			.list__songs {
+				position: absolute;
+				max-height: 154px;
+				min-width: max-content;
+				& .song {
+					padding: 8px;
+					display: inline-block;
+					&__img {
+						width: 80px;
+						height: 80px;
+						border-radius: 4px;
+					}
+					&__name {
+						margin-top: 8px;
+						color: rgb(255, 255, 255, 0.9);
+						font-size: 1.2rem;
+						font-weight: 500;
+					}
+					&__singer {
+						color: rgb(255, 255, 255, 0.4);
+					}
+				}
+			}
+
+			&::-webkit-scrollbar {
+				height: 3px;
+			}
+			&::-webkit-scrollbar-thumb {
+				border-radius: 6px;
+				background-color: $blue-color-lighter;
+			}
+			&::-webkit-scrollbar-track {
+				border-radius: none;
+			}
+			&::-webkit-scrollbar-button {
+				display: none;
+			}
+		}
+
+		.cover {
+			position: absolute;
+			right: 0;
+			bottom: 5%;
+			width: 30%;
+			height: 95%;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+		}
+	}
+	.group-heading{
+		display: flex;
+		justify-content: space-between;	
+	}
+	.view-all{
+		font-size: 1.5rem;
+		color: $blue-color-lighter;
 	}
 }

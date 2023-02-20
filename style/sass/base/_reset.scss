@@ -15,6 +15,7 @@ html {
 }
 body{
 	height: 100vh;
+	padding: 50px 0 0 0;
 	background-color: $background-color;
 }
 input,
@@ -78,4 +79,10 @@ h6 {
 	textarea {
 		font-size: 16px;
 	}
+}
+
+
+.section-space {
+	width: 90%;
+	margin: 25px auto 0;
 }

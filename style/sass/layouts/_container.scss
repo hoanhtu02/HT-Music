@@ -1,10 +1,10 @@
 .app {
 	width: 80%;
-	height: 90%;
-	margin: 45px auto 0;
+	height: 95%;
+	margin: 0 auto 0;
 	border-radius: 15px;
 	display: grid;
 	overflow: hidden;
 	box-shadow: 5px 5px 22px rgba(0, 0, 0, 0.8);
-	grid-template-columns: 120px 1fr 360px;
+	grid-template-columns: min-content 1fr 360px;
 }
